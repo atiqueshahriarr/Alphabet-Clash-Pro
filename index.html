@@ -23,16 +23,15 @@
 <body>
   <main class="bg-[#010313] min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-center">
 
-    <section class="home flex flex-col items-center hidden">
+    <section class="home flex flex-col items-center" id="home">
       <div class="flex flex-col items-center justify-center min-h-screen space-y-8 text-white">
         <h1 class="text-8xl font-extrabold">ALPHABET CLASH</h1>
         <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-        <button class="btn">Play Now</button>
+        <button class="btn" onclick="homePlayBtnFunction()">Play Now</button>
       </div>
-
     </section>
 
-    <section class="play-ground flex flex-col items-center hidden">
+    <section class="play-ground flex flex-col items-center hidden" id="play-ground">
       <div class="container flex flex-col items-center gap-16 pt-20">
 
         <div>
@@ -101,8 +100,7 @@
       </div>
     </section>
 
-
-    <section class="score">
+    <section class="score hidden">
       <div class="w-full min-h-screen border flex justify-center items-center">
         <div class="card w-96 bg-[#ffffff13] shadow-xl">
           <div class="card-body flex items-center gap-6 text-white">
@@ -116,6 +114,8 @@
       </div>
     </section>
   </main>
+
+  <script src="alpha.js"></script>
 </body>
 
 </html>
