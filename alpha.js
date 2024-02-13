@@ -17,7 +17,7 @@ function continueGame() {
   const alphabetLetter = document.getElementById('alphabetDisplay');
   alphabetLetter.innerText = randomAlphabet;
   const keyBtn=document.getElementById(randomAlphabet);
-  keyBtn.classList.add("bg-orange-500")
+  keyBtn.classList.add("bg-orange-500");
 }
 
 function getARandomAlphabet() {
