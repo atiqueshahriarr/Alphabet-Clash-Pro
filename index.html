@@ -25,7 +25,7 @@
 
     <section class="home flex flex-col items-center" id="home">
       <div class="flex flex-col items-center justify-center min-h-screen space-y-8 text-white">
-        <h1 class="text-8xl font-extrabold">ALPHABET CLASH</h1>
+        <h1 class="text-xl md:text-6xl lg:text-8xl font-extrabold">ALPHABET CLASH</h1>
         <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
         <button class="btn" onclick="homePlayBtnFunction()">Play Now</button>
       </div>
@@ -34,10 +34,11 @@
     <section class="play-ground flex flex-col items-center hidden" id="play-ground">
       <div class="container flex flex-col items-center gap-16 pt-20">
         <div>
-          <div class="artboard artboard-horizontal phone-6 border-[16px] rounded-2xl border-[#010313CC] bg-[#FFFFFFD3]">
-
+          <div
+            class=" artboard-horizontal phone-6 border-[16px] rounded-2xl border-[#010313CC] bg-[#FFFFFFD3] h-80 md:w-[760px] lg:w-[1000px] xl:w-[1280px]">
             <div class="flex justify-center">
-              <p class="bg-[#010313CC] px-8 py-2 rounded-b-xl text-white">Don't watch keyboard while playing...</p>
+              <p class="bg-[#010313CC] px-8 py-2 rounded-b-xl text-white mx-6">Don't watch keyboard while playing...
+              </p>
             </div>
             <div class="flex justify-center pt-12">
               <h1 class="text-[#010313CC] text-8xl font-extrabold" id="alphabetDisplay">Y</h1>
@@ -47,44 +48,44 @@
 
         <!-- Keyboard -->
         <div>
-          <div class="flex justify-center gap-2 my-2 w-full">
-            <kbd id="q" class="kbd h-16 w-16 text-3xl">q</kbd>
-            <kbd id="w" class="kbd h-16 w-16 text-3xl">w</kbd>
-            <kbd id="e" class="kbd h-16 w-16 text-3xl">e</kbd>
-            <kbd id="r" class="kbd h-16 w-16 text-3xl">r</kbd>
-            <kbd id="t" class="kbd h-16 w-16 text-3xl">t</kbd>
-            <kbd id="y" class="kbd h-16 w-16 text-3xl">y</kbd>
-            <kbd id="u" class="kbd h-16 w-16 text-3xl">u</kbd>
-            <kbd id="i" class="kbd h-16 w-16 text-3xl">i</kbd>
-            <kbd id="o" class="kbd h-16 w-16 text-3xl">o</kbd>
-            <kbd id="p" class="kbd h-16 w-16 text-3xl">p</kbd>
+          <div class="flex justify-center gap-1 my-1 md:gap-2 md:my-2 w-full">
+            <kbd id="q" class="kbd md:h-16 md:w-16 md:text-3xl">q</kbd>
+            <kbd id="w" class="kbd md:h-16 md:w-16 md:text-3xl">w</kbd>
+            <kbd id="e" class="kbd md:h-16 md:w-16 md:text-3xl">e</kbd>
+            <kbd id="r" class="kbd md:h-16 md:w-16 md:text-3xl">r</kbd>
+            <kbd id="t" class="kbd md:h-16 md:w-16 md:text-3xl">t</kbd>
+            <kbd id="y" class="kbd md:h-16 md:w-16 md:text-3xl">y</kbd>
+            <kbd id="u" class="kbd md:h-16 md:w-16 md:text-3xl">u</kbd>
+            <kbd id="i" class="kbd md:h-16 md:w-16 md:text-3xl">i</kbd>
+            <kbd id="o" class="kbd md:h-16 md:w-16 md:text-3xl">o</kbd>
+            <kbd id="p" class="kbd md:h-16 md:w-16 md:text-3xl">p</kbd>
           </div>
-          <div class="flex justify-center gap-2 my-2 w-full">
-            <kbd id="a" class="kbd h-16 w-16 text-3xl">a</kbd>
-            <kbd id="s" class="kbd h-16 w-16 text-3xl">s</kbd>
-            <kbd id="d" class="kbd h-16 w-16 text-3xl">d</kbd>
-            <kbd id="f" class="kbd h-16 w-16 text-3xl">f</kbd>
-            <kbd id="g" class="kbd h-16 w-16 text-3xl">g</kbd>
-            <kbd id="h" class="kbd h-16 w-16 text-3xl">h</kbd>
-            <kbd id="j" class="kbd h-16 w-16 text-3xl">j</kbd>
-            <kbd id="k" class="kbd h-16 w-16 text-3xl">k</kbd>
-            <kbd id="l" class="kbd h-16 w-16 text-3xl">l</kbd>
+          <div class="flex justify-center gap-1 my-1 md:gap-2 md:my-2 w-full">
+            <kbd id="a" class="kbd md:h-16 md:w-16 md:text-3xl">a</kbd>
+            <kbd id="s" class="kbd md:h-16 md:w-16 md:text-3xl">s</kbd>
+            <kbd id="d" class="kbd md:h-16 md:w-16 md:text-3xl">d</kbd>
+            <kbd id="f" class="kbd md:h-16 md:w-16 md:text-3xl">f</kbd>
+            <kbd id="g" class="kbd md:h-16 md:w-16 md:text-3xl">g</kbd>
+            <kbd id="h" class="kbd md:h-16 md:w-16 md:text-3xl">h</kbd>
+            <kbd id="j" class="kbd md:h-16 md:w-16 md:text-3xl">j</kbd>
+            <kbd id="k" class="kbd md:h-16 md:w-16 md:text-3xl">k</kbd>
+            <kbd id="l" class="kbd md:h-16 md:w-16 md:text-3xl">l</kbd>
           </div>
-          <div class="flex justify-center gap-2 my-2 w-full">
-            <kbd id="z" class="kbd  h-16 w-16 text-3xl">z</kbd>
-            <kbd id="x" class="kbd  h-16 w-16 text-3xl">x</kbd>
-            <kbd id="c" class="kbd  h-16 w-16 text-3xl">c</kbd>
-            <kbd id="v" class="kbd  h-16 w-16 text-3xl">v</kbd>
-            <kbd id="b" class="kbd  h-16 w-16 text-3xl">b</kbd>
-            <kbd id="n" class="kbd  h-16 w-16 text-3xl">n</kbd>
-            <kbd id="m" class="kbd  h-16 w-16 text-3xl">m</kbd>
-            <kbd id="/" class="kbd  h-16 w-16 text-3xl">/</kbd>
+          <div class="flex justify-center gap-1 my-1 md:gap-2 md:my-2 w-full">
+            <kbd id="z" class="kbd  md:h-16 md:w-16 md:text-3xl">z</kbd>
+            <kbd id="x" class="kbd  md:h-16 md:w-16 md:text-3xl">x</kbd>
+            <kbd id="c" class="kbd  md:h-16 md:w-16 md:text-3xl">c</kbd>
+            <kbd id="v" class="kbd  md:h-16 md:w-16 md:text-3xl">v</kbd>
+            <kbd id="b" class="kbd  md:h-16 md:w-16 md:text-3xl">b</kbd>
+            <kbd id="n" class="kbd  md:h-16 md:w-16 md:text-3xl">n</kbd>
+            <kbd id="m" class="kbd  md:h-16 md:w-16 md:text-3xl">m</kbd>
+            <kbd id="/" class="kbd  md:h-16 md:w-16 md:text-3xl">/</kbd>
           </div>
         </div>
 
 
         <!-- Life Score -->
-        <div class="w-full flex justify-between ">
+        <div class="w-full flex justify-between px-10 md:px-0">
           <button class="btn bg-purple-500 text-white border-none rounded-full"> Life
             <img src="images/Heart.svg" alt="">
             <span id="lifeBtn">3</span>
@@ -95,6 +96,9 @@
             <span id="scoreBtn">0</span>
           </button>
         </div>
+        <div>
+          <p class="text-white">If you want to end the game press "Esc"</p>
+        </div>
 
       </div>
     </section>
@@ -103,9 +107,10 @@
       <div class="w-full min-h-screen border flex justify-center items-center">
         <div class="card w-96 bg-[#ffffff13] shadow-xl">
           <div class="card-body flex items-center gap-6 text-white">
+            <h2 class="text-2xl font-bold">Game Over!!!</h2>
             <h2 class="card-title text-6xl font-extrabold">Score: <span id="finalScore">14</span></h2>
             <div class="card-actions">
-              <button class="btn" onclick="playAgain()">Play Now</button>
+              <button class="btn" onclick="playAgain()">Play Again</button>
             </div>
             <p>Practice will make you Pro</p>
           </div>
