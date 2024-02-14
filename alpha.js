@@ -31,6 +31,22 @@ function getARandomAlphabet() {
 
 function handleKeyboardButtonPress(event) {
   const playerPressed = event.key;
+
+  console.log(playerPressed, "Player Pressed");
+  if (playerPressed === "Escape") {
+    const playGroundPage = document.getElementById("play-ground");
+    playGroundPage.classList.add("hidden");
+    const scorePage = document.getElementById("score");
+    scorePage.classList.remove("hidden");
+
+    const score = document.getElementById("scoreBtn");
+    const scoreVal = parseInt(score.innerText);
+
+    const finalScore = document.getElementById("finalScore");
+    finalScore.innerText = scoreVal;
+  }
+
+
   const displayAlpha = document.getElementById("alphabetDisplay").innerText;
   if (playerPressed === displayAlpha) {
     console.log(true);
@@ -45,16 +61,40 @@ function handleKeyboardButtonPress(event) {
     console.log(false);
     const life = document.getElementById("lifeBtn");
     const lifeValue = parseInt(life.innerText);
-
-    if (lifeValue === 0) {
+    life.innerText = lifeValue - 1;
+    if (lifeValue === 1) {
       const playGroundPage = document.getElementById("play-ground");
       playGroundPage.classList.add("hidden");
       const scorePage = document.getElementById("score");
       scorePage.classList.remove("hidden");
+
+      const score = document.getElementById("scoreBtn");
+      const scoreVal = parseInt(score.innerText);
+
+      const finalScore = document.getElementById("finalScore");
+      finalScore.innerText = scoreVal;
     }
-    life.innerText = lifeValue - 1;
+
 
   }
 }
 document.addEventListener("keyup", handleKeyboardButtonPress)
 
+
+
+function playAgain() {
+  const homePage = document.getElementById("home");
+  homePage.classList.add("hidden");
+
+  const playGroundPage = document.getElementById("play-ground");
+  playGroundPage.classList.remove("hidden");
+
+  const scorePage = document.getElementById("score");
+  scorePage.classList.add("hidden");
+
+  const score = document.getElementById("scoreBtn");
+  score.innerText = 0;
+
+  const life = document.getElementById("lifeBtn");
+  life.innerText = 3;
+}
