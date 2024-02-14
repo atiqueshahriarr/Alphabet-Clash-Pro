@@ -1,24 +1,18 @@
-console.log("Hello");
-
 function homePlayBtnFunction() {
-  const homePage = document.getElementById("home");
-  homePage.classList.add("hidden");
-
-  const playGroundPage = document.getElementById("play-ground");
-  playGroundPage.classList.remove("hidden");
+  hideHome();
+  displayPlayGround();
   continueGame();
-
 }
 
 function continueGame() {
   const randomAlphabet = getARandomAlphabet();
-  console.log(randomAlphabet);
+  const alphabetLetter = getElement("alphabetDisplay");
 
-  const alphabetLetter = document.getElementById('alphabetDisplay');
-  alphabetLetter.innerText = randomAlphabet;
-  const keyBtn = document.getElementById(randomAlphabet);
-  keyBtn.classList.add("bg-orange-500");
+  setElement(alphabetLetter, randomAlphabet);
 
+  //Add Key Button Color
+  const keyBtn = getElement(randomAlphabet);
+  addBgElement(keyBtn);
 }
 
 function getARandomAlphabet() {
@@ -32,69 +26,41 @@ function getARandomAlphabet() {
 function handleKeyboardButtonPress(event) {
   const playerPressed = event.key;
 
-  console.log(playerPressed, "Player Pressed");
   if (playerPressed === "Escape") {
-    const playGroundPage = document.getElementById("play-ground");
-    playGroundPage.classList.add("hidden");
-    const scorePage = document.getElementById("score");
-    scorePage.classList.remove("hidden");
-
-    const score = document.getElementById("scoreBtn");
-    const scoreVal = parseInt(score.innerText);
-
-    const finalScore = document.getElementById("finalScore");
-    finalScore.innerText = scoreVal;
+    gameOver();
   }
 
+  const displayAlpha = getElement("alphabetDisplay").innerText;
 
-  const displayAlpha = document.getElementById("alphabetDisplay").innerText;
   if (playerPressed === displayAlpha) {
-    console.log(true);
-    const keyBtn = document.getElementById(playerPressed);
-    keyBtn.classList.remove("bg-orange-500");
-    const score = document.getElementById("scoreBtn");
+    const keyBtn = getElement(playerPressed);
+    removeBgElement(keyBtn);
+
+    const score = getElement("scoreBtn");
     const scoreVal = parseInt(score.innerText);
-    score.innerText = scoreVal + 1;
+    setElement(score, scoreVal + 1);
     continueGame();
   }
   else {
-    console.log(false);
-    const life = document.getElementById("lifeBtn");
-    const lifeValue = parseInt(life.innerText);
-    life.innerText = lifeValue - 1;
-    if (lifeValue === 1) {
-      const playGroundPage = document.getElementById("play-ground");
-      playGroundPage.classList.add("hidden");
-      const scorePage = document.getElementById("score");
-      scorePage.classList.remove("hidden");
-
-      const score = document.getElementById("scoreBtn");
-      const scoreVal = parseInt(score.innerText);
-
-      const finalScore = document.getElementById("finalScore");
-      finalScore.innerText = scoreVal;
+    const life = getElement("lifeBtn");
+    const lifeVal = parseInt(life.innerText);
+    setElement(life, lifeVal - 1);
+    if (lifeVal === 1) {
+      gameOver();
     }
-
-
   }
 }
+
 document.addEventListener("keyup", handleKeyboardButtonPress)
 
-
-
 function playAgain() {
-  const homePage = document.getElementById("home");
-  homePage.classList.add("hidden");
+  hideHome();
+  displayPlayGround();
+  hideScore();
 
-  const playGroundPage = document.getElementById("play-ground");
-  playGroundPage.classList.remove("hidden");
+  const score = getElement("scoreBtn");
+  setElement(score, 0);
 
-  const scorePage = document.getElementById("score");
-  scorePage.classList.add("hidden");
-
-  const score = document.getElementById("scoreBtn");
-  score.innerText = 0;
-
-  const life = document.getElementById("lifeBtn");
-  life.innerText = 3;
+  const life = getElement("lifeBtn");
+  setElement(life, 3);
 }
